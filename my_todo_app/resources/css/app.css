@@ -1,0 +1,95 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+/* Bubble Container */
+.bubble-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Individual Bubbles */
+.bubble {
+    position: absolute;
+    bottom: -100px;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(139, 92, 246, 0.15));
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: float-up infinite ease-in-out;
+    filter: blur(2px);
+}
+
+/* Dark mode bubble colors */
+:is(.dark .bubble) {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.08), rgba(139, 92, 246, 0.08));
+}
+
+/* Float Up Animation */
+@keyframes float-up {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.6;
+    }
+    90% {
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateY(-100vh) scale(0.8);
+        opacity: 0;
+    }
+}
+
+/* Custom checkbox styling */
+@utility checkbox-custom {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgb(209 213 219);
+    border-radius: 6px;
+    background-color: white;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+@utility checkbox-custom-dark {
+    &:is(.dark *) {
+        border-color: rgb(55 65 81);
+        background-color: rgb(31 41 55);
+    }
+}
+
+@utility checkbox-checked {
+    &:checked {
+        background-color: rgb(99 102 241);
+        border-color: rgb(99 102 241);
+    }
+    &:checked::after {
+        content: '';
+        position: absolute;
+        left: 5px;
+        top: 2px;
+        width: 5px;
+        height: 9px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+    }
+}
