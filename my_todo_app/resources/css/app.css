@@ -28,9 +28,9 @@
     bottom: -100px;
     background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(139, 92, 246, 0.15));
     border-radius: 50%;
-    opacity: 0.6;
+    opacity: 0.3;
     animation: float-up infinite ease-in-out;
-    filter: blur(2px);
+    filter: blur(0px);
 }
 
 /* Dark mode bubble colors */

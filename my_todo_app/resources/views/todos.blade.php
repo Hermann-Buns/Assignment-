@@ -13,8 +13,8 @@
     <div class="max-w-2xl mx-auto relative z-10">
         <!-- Header Section -->
         <div class="mb-8">
-            <h1 class="text-4xl font-bold text-gray-900 dark:text-gray-100 mb-2">Todo List</h1>
-            <p class="text-gray-600 dark:text-gray-400">Organize your tasks efficiently</p>
+            <h1 class="text-4xl font-bold text-gray-900 dark:text-gray-100 mb-2">Kajal Todos😎</h1><br>
+            <p class="text-gray-600 dark:text-gray-400">This is where I organise my tasks efficiently</p>
         </div>
 
         <!-- Add Task Form Card -->

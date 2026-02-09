@@ -14,8 +14,8 @@ function createBubbles() {
         // Random properties
         const size = Math.random() * 40 + 20; // 20-60px
         const left = Math.random() * 100; // 0-100%
-        const duration = Math.random() * 8 + 12; // 12-20s
-        const delay = Math.random() * 5; // 0-5s
+        const duration = Math.random() * 48 + 12; // 12-60s
+        const delay = Math.random() * 2; // 0-2s
         
         bubble.style.width = `${size}px`;
         bubble.style.height = `${size}px`;
